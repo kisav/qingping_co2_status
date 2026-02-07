@@ -4,8 +4,6 @@ import requests
 
 def get_token(app_key_and_secret):
 
-
-
     headers = {
         "Authorization": f"Basic {app_key_and_secret}",
         "Content-Type": "application/x-www-form-urlencoded"
