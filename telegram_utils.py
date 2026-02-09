@@ -34,7 +34,7 @@ async def start_check(message: Message):
         check_status,
         "interval",
         seconds=10,
-        args=(bot,),
+        args=(bot, message.chat.id),
         id="status_job",
         replace_existing=True
     )
@@ -43,6 +43,7 @@ async def start_check(message: Message):
 
 
 async def main():
+    scheduler.start()
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
