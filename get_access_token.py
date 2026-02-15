@@ -1,11 +1,18 @@
 import base64
 import requests
+from models import get_token
 
 
-def get_token(app_key_and_secret):
+
+def get_access_token(chat_id):
+
+
+    raw = get_token(chat_id)                 
+    encoded = base64.b64encode(raw.encode()).decode()
+
 
     headers = {
-        "Authorization": f"Basic {app_key_and_secret}",
+        "Authorization": f"Basic {encoded}",
         "Content-Type": "application/x-www-form-urlencoded"
     }
 
