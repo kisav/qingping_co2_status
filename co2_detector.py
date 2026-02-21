@@ -21,10 +21,24 @@ def co2_status(chat_id):
     response = requests.get(URL, headers=HEADERS, timeout=10)
 
     data = response.json()
-    device = data["devices"][0]
-    co2_value = device["data"]["co2"]["value"]
+    
+    try:
+        device = next(
+            d for d in data["devices"]
+            if "air monitor" in d["info"]["product"]["en_name"].lower()
+        )
 
-    return co2_value
+        co2_data = device["data"]["co2"]["value"]
+        return co2_data
+
+    except StopIteration:
+        return "Устройство не подключено к вашему аккаунту"
+
+    except KeyError:
+        return "Данные ещё не обновились"  
+
+
+
 
 
     
