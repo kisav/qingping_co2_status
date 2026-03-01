@@ -1,0 +1,525 @@
+Mar 01 20:24:48 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4165.[0m
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.261298964+03:00" level=info msg="Starting up"
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.261633670+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.261682798+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.261691483+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.267105770+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.273924947+03:00" level=info msg="Loading containers: start."
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.273955420+03:00" level=info msg="NRI is disabled"
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.273961460+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.275382738+03:00" level=info msg="Restoring containers: start."
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.280078275+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.283041391+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.322840350+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 20:24:48 homepc dockerd[59347]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to add jump rules to ipv4 NAT table: failed to append jump rules to nat-PREROUTING:  (iptables failed: iptables --wait -t nat -A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER: Warning: Extension addrtype revision 0 not supported, missing kernel module?
+Mar 01 20:24:48 homepc dockerd[59347]: iptables: No chain/target/match by that name.
+Mar 01 20:24:48 homepc dockerd[59347]:  (exit status 1))
+Mar 01 20:24:48 homepc dockerd[59347]: time="2026-03-01T20:24:48.322906047+03:00" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=plugins.moby
+Mar 01 20:24:48 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 20:24:48 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:24:48 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4165 and the job result is failed.[0m
+Mar 01 20:24:50 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 1.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 20:24:50 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4272.[0m
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.604387807+03:00" level=info msg="Starting up"
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.604581738+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.604609951+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.604614146+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.609669138+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.760705339+03:00" level=info msg="Loading containers: start."
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.760786797+03:00" level=info msg="NRI is disabled"
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.760798974+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.763717845+03:00" level=info msg="Restoring containers: start."
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.777925985+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.789920411+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 20:24:50 homepc dockerd[59466]: time="2026-03-01T20:24:50.979655976+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 20:24:50 homepc dockerd[59466]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to add jump rules to ipv4 NAT table: failed to append jump rules to nat-PREROUTING:  (iptables failed: iptables --wait -t nat -A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER: Warning: Extension addrtype revision 0 not supported, missing kernel module?
+Mar 01 20:24:50 homepc dockerd[59466]: iptables: No chain/target/match by that name.
+Mar 01 20:24:50 homepc dockerd[59466]:  (exit status 1))
+Mar 01 20:24:50 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 20:24:50 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:24:50 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4272 and the job result is failed.[0m
+Mar 01 20:24:53 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 2.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 20:24:53 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4379.[0m
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.096450256+03:00" level=info msg="Starting up"
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.096621255+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.096646549+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.096650969+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.101602769+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.103748793+03:00" level=info msg="Loading containers: start."
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.103762601+03:00" level=info msg="NRI is disabled"
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.103765465+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.104251984+03:00" level=info msg="Restoring containers: start."
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.109143491+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.114204253+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 20:24:53 homepc dockerd[59581]: time="2026-03-01T20:24:53.289286946+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 20:24:53 homepc dockerd[59581]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to add jump rules to ipv4 NAT table: failed to append jump rules to nat-PREROUTING:  (iptables failed: iptables --wait -t nat -A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER: Warning: Extension addrtype revision 0 not supported, missing kernel module?
+Mar 01 20:24:53 homepc dockerd[59581]: iptables: No chain/target/match by that name.
+Mar 01 20:24:53 homepc dockerd[59581]:  (exit status 1))
+Mar 01 20:24:53 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 20:24:53 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:24:53 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4379 and the job result is failed.[0m
+Mar 01 20:24:55 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 20:24:55 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Start request repeated too quickly.[0m
+Mar 01 20:24:55 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:24:55 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4486 and the job result is failed.[0m
+Mar 01 20:25:04 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Start request repeated too quickly.[0m
+Mar 01 20:25:04 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:25:04 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4694 and the job result is failed.[0m
+Mar 01 20:27:35 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4902.[0m
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.000980593+03:00" level=info msg="Starting up"
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.001334627+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.001392372+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.001404688+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.012841621+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.015723161+03:00" level=info msg="Loading containers: start."
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.015764274+03:00" level=info msg="NRI is disabled"
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.015773273+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.019382808+03:00" level=info msg="Restoring containers: start."
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.032366993+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.043845594+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 20:27:36 homepc dockerd[59984]: time="2026-03-01T20:27:36.217414279+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 20:27:36 homepc dockerd[59984]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (nf_tables): Could not fetch rule set generation id: Invalid argument
+Mar 01 20:27:36 homepc dockerd[59984]:  (exit status 4)
+Mar 01 20:27:36 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 20:27:36 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:27:36 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 4902 and the job result is failed.[0m
+Mar 01 20:27:38 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 1.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 20:27:38 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5009.[0m
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.372546618+03:00" level=info msg="Starting up"
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.372907781+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.372957017+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.372966205+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.391250468+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.395195050+03:00" level=info msg="Loading containers: start."
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.395255896+03:00" level=info msg="NRI is disabled"
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.395269836+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.397504828+03:00" level=info msg="Restoring containers: start."
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.408975489+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.420805696+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 20:27:38 homepc dockerd[60087]: time="2026-03-01T20:27:38.606958332+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 20:27:38 homepc dockerd[60087]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (nf_tables): Could not fetch rule set generation id: Invalid argument
+Mar 01 20:27:38 homepc dockerd[60087]:  (exit status 4)
+Mar 01 20:27:38 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 20:27:38 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:27:38 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5009 and the job result is failed.[0m
+Mar 01 20:27:40 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 2.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 20:27:40 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5116.[0m
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.862097310+03:00" level=info msg="Starting up"
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.862311705+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.862346091+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.862351163+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.867823257+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.870102551+03:00" level=info msg="Loading containers: start."
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.870124853+03:00" level=info msg="NRI is disabled"
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.870128388+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.870695732+03:00" level=info msg="Restoring containers: start."
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.875254438+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 20:27:40 homepc dockerd[60182]: time="2026-03-01T20:27:40.881336483+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 20:27:41 homepc dockerd[60182]: time="2026-03-01T20:27:41.037592584+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 20:27:41 homepc dockerd[60182]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (nf_tables): Could not fetch rule set generation id: Invalid argument
+Mar 01 20:27:41 homepc dockerd[60182]:  (exit status 4)
+Mar 01 20:27:41 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 20:27:41 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:27:41 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5116 and the job result is failed.[0m
+Mar 01 20:27:43 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 20:27:43 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Start request repeated too quickly.[0m
+Mar 01 20:27:43 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 20:27:43 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5223 and the job result is failed.[0m
+Mar 01 21:03:40 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5330.[0m
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.480064234+03:00" level=info msg="Starting up"
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.480257433+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.480285678+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.480290181+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.485359713+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.487768265+03:00" level=info msg="Loading containers: start."
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.487782758+03:00" level=info msg="NRI is disabled"
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.487785763+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.488443376+03:00" level=info msg="Restoring containers: start."
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.492984425+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.496536589+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.542830123+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 21:03:40 homepc dockerd[62416]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (nf_tables): Could not fetch rule set generation id: Invalid argument
+Mar 01 21:03:40 homepc dockerd[62416]:  (exit status 4)
+Mar 01 21:03:40 homepc dockerd[62416]: time="2026-03-01T21:03:40.542876121+03:00" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=plugins.moby
+Mar 01 21:03:40 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 21:03:40 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 21:03:40 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5330 and the job result is failed.[0m
+Mar 01 21:03:42 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 1.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 21:03:42 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5437.[0m
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.598955573+03:00" level=info msg="Starting up"
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.599128740+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.599151801+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.599155515+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.604258683+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.607767232+03:00" level=info msg="Loading containers: start."
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.607780759+03:00" level=info msg="NRI is disabled"
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.607783430+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.608904419+03:00" level=info msg="Restoring containers: start."
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.613136151+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.617973506+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.776383136+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 21:03:42 homepc dockerd[62512]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (nf_tables): Could not fetch rule set generation id: Invalid argument
+Mar 01 21:03:42 homepc dockerd[62512]:  (exit status 4)
+Mar 01 21:03:42 homepc dockerd[62512]: time="2026-03-01T21:03:42.777277843+03:00" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=plugins.moby
+Mar 01 21:03:42 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 21:03:42 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 21:03:42 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5437 and the job result is failed.[0m
+Mar 01 21:03:44 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 2.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 21:03:44 homepc systemd[1]: Starting Docker Application Container Engine...
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has begun execution[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has begun execution.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5544.[0m
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.846588062+03:00" level=info msg="Starting up"
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.846764675+03:00" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.846791548+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.846795333+03:00" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.851852221+03:00" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.854016784+03:00" level=info msg="Loading containers: start."
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.854032722+03:00" level=info msg="NRI is disabled"
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.854035854+03:00" level=info msg="Starting daemon with containerd snapshotter integration enabled"
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.854876387+03:00" level=info msg="Restoring containers: start."
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.859899865+03:00" level=info msg="Deleting nftables IPv4 rules" error="exit status 1"
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.865470785+03:00" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Mar 01 21:03:44 homepc dockerd[62607]: time="2026-03-01T21:03:44.982699516+03:00" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Mar 01 21:03:44 homepc dockerd[62607]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (nf_tables): Could not fetch rule set generation id: Invalid argument
+Mar 01 21:03:44 homepc dockerd[62607]:  (exit status 4)
+Mar 01 21:03:44 homepc systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAn ExecStart= process belonging to unit docker.service has exited.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 01 21:03:44 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 21:03:44 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5544 and the job result is failed.[0m
+Mar 01 21:03:47 homepc systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+[0;38:5:245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mAutomatic restarting of the unit docker.service has been scheduled, as the result for[0m
+[0;38:5:245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 01 21:03:47 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Start request repeated too quickly.[0m
+Mar 01 21:03:47 homepc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe unit docker.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 01 21:03:47 homepc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+[0;38:5:245m░░ [0m[0;32mSubject: A start job for unit docker.service has failed[0m
+[0;38:5:245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38:5:245m░░[0m [0;32mSupport: https://lists.freedesktop.org/mailman/listinfo/systemd-devel[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mA start job for unit docker.service has finished with a failure.[0m
+[0;38:5:245m░░[0m [0;32m[0m
+[0;38:5:245m░░[0m [0;32mThe job identifier is 5651 and the job result is failed.[0m
