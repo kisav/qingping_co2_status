@@ -29,5 +29,3 @@ def get_access_token(chat_id):
 
     return r.json()["access_token"]
 
-if __name__ == "__main__":
-    print(get_token())

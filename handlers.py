@@ -3,11 +3,13 @@ from aiogram.types import Message
 from aiogram.filters import CommandStart, Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
+from aiogram.filters.command import CommandObject
 
 from co2_detector import co2_status
 from checker import check_status
 from models import create_user
 from scheduler import scheduler
+from update_time import up_time
 
 router = Router()
 
@@ -38,10 +40,19 @@ async def co2_cmd(message: Message):
     level_co2 = co2_status(message.chat.id)
     await message.answer(f"Ваш уровень CO2: {level_co2}")
 
+@router.message(Command("update"))
+async def update_handler(message: Message, command: CommandObject):
+    text = int(command.args)  
+    chat_id = message.chat.id
+    
+    print(up_time(chat_id, text))
+    await message.answer(f"Время сбора изменилось на {text} секунд")
+
 
 @router.message(Command("collect"))
 async def start_check(message: Message, bot):
     level_co2 = co2_status(message.chat.id)
+    
 
     scheduler.add_job(
         check_status,
